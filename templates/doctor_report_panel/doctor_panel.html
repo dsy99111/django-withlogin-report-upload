@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Panel</title>
+</head>
+<body>
+    <h1>Welcome, Dr. {{ doctor.user.username }}</h1>
+    <h2>Reports Assigned to You</h2>
+    <ul>
+        {% for report in patient_reports %}
+        <li>
+            Patient: {{ report.patient.username }}
+            <a href="{{ report.report_file.url }}">{{ report.report_file.name }}</a>
+        </li>
+        {% empty %}
+        <li>No reports assigned to you.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

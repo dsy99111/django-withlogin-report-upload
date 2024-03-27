@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags, stylesheets, etc. -->
+</head>
+<body>
+    <header>
+        <h1>Crud operation Website</h1>
+        <!-- Other header content -->
+    </header>
+    <body>
+
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <!-- Add links for patient and receptionist login/register -->
+                <li><a href="{% url 'patient_login' %}">Patient Login</a></li>
+                <li><a href="{% url 'patient_register' %}">Patient Register</a></li>
+
+                <!-- Add links for doctor login/register -->
+
+            </ul>
+        </nav>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+    <footer>
+        <!-- Footer content -->
+    </footer>
+</body>
+</html>
